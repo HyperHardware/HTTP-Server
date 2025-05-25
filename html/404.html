@@ -1,0 +1,162 @@
+	<!DOCTYPE html>
+	<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>页面维护中 - 404 Not Found</title>
+		<style>
+			:root {
+				--main-color: #20a53a;
+				--accent-color: #ff6b6b;
+			}
+	
+			body {
+				margin: 0;
+				padding: 20px;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+				background: #f8f9fa;
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+			}
+	
+			.container {
+				max-width: 800px;
+				margin: 0 auto;
+				text-align: center;
+				padding: 30px;
+			}
+	
+			.maintenance-animation {
+				position: relative;
+				width: 200px;
+				height: 200px;
+				margin: 0 auto 30px;
+			}
+	
+			.tool {
+				position: absolute;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+			}
+	
+			.screwdriver {
+				left: 40%;
+				top: 30%;
+				width: 40px;
+				animation-name: tool-rotate;
+				color: var(--accent-color);
+			}
+	
+			.wrench {
+				right: 35%;
+				bottom: 30%;
+				width: 50px;
+				animation-name: tool-rotate-reverse;
+				color: #4d8be6;
+			}
+	
+			.warning-sign {
+				width: 120px;
+				animation: pulse 1.5s ease-in-out infinite;
+				color: var(--accent-color);
+			}
+	
+			@keyframes tool-rotate {
+				0%, 100% { transform: rotate(-15deg); }
+				50% { transform: rotate(15deg); }
+			}
+	
+			@keyframes tool-rotate-reverse {
+				0%, 100% { transform: rotate(15deg); }
+				50% { transform: rotate(-15deg); }
+			}
+	
+			@keyframes pulse {
+				0% { transform: scale(1); }
+				50% { transform: scale(1.1); }
+				100% { transform: scale(1); }
+			}
+	
+			h1 {
+				color: var(--main-color);
+				font-size: 2.5em;
+				margin: 20px 0;
+			}
+	
+			h2 {
+				color: var(--accent-color);
+				margin-bottom: 30px;
+			}
+	
+			.btlink {
+				color: var(--main-color);
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+	
+			.btlink:hover {
+				color: #1a8230;
+			}
+	
+			.message {
+				font-size: 1.2em;
+				color: #666;
+				margin: 25px 0;
+				line-height: 1.6;
+			}
+	
+			.admin-contact {
+				margin-top: 30px;
+				font-size: 1.1em;
+			}
+	
+			.admin-contact a {
+				color: var(--main-color);
+				text-decoration: none;
+				border-bottom: 1px dashed;
+				transition: all 0.3s ease;
+			}
+	
+			.admin-contact a:hover {
+				color: #1a8230;
+				border-bottom-style: solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="maintenance-animation">
+				<svg class="warning-sign" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+					<path fill="currentColor" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+				</svg>
+				<svg class="tool screwdriver" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+					<path fill="currentColor" d="M0 3l3-1.007a.5.5 0 0 1 .686.343l.542 2.016a.5.5 0 0 1-.028.484l-2.22 3.22a.5.5 0 0 0 .1.6L4 10l.5 4 2.5-.5 1.5-3-3.5-2-2-3.5z"/>
+				</svg>
+				<svg class="tool wrench" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+					<path fill="currentColor" d="M6.5 1.293a.5.5 0 0 0 0 .706L7.793 3l-5.147 5.147a.5.5 0 0 0 .708.708L8.5 3.707l1.354 1.353a.5.5 0 1 0 .708-.708L9.207 3l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 2.293 6.646.439a.5.5 0 0 0-.708 0L5.5 1.293 4.646.439a.5.5 0 0 0-.708 0L3.5 1.293 2.646.439a.5.5 0 0 0-.708 0L1.5 1.293.646.439a.5.5 0 0 0-.708.708L1.293 2.5.44 3.354a.5.5 0 0 0 0 .707L5.5 9.207l.354.353a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 0 0-.708 0L5.5 5.793 1.854 2.146a.5.5 0 0 1 0-.708L2.5.793a.5.5 0 0 1 .708 0L3.5 1.707 4.354.854a.5.5 0 0 1 .708 0L5.5 1.707l1.146-1.147a.5.5 0 0 1 .708 0L7.5 1.707l1.146-1.147a.5.5 0 0 1 .708 0L9.5 1.707l1.146-1.147a.5.5 0 0 1 .708 0l.646.647a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0L8.5 3.707l-1.146 1.147a.5.5 0 0 1-.708 0L6.5 3.707 3.707 6.5l2.646 2.647a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 0 0-.708 0L5.5 5.793 1.854 2.146a.5.5 0 0 1 0-.708L2.5.793a.5.5 0 0 1 .708 0L3.5 1.707 4.354.854a.5.5 0 0 1 .708 0L5.5 1.707l1.146-1.147a.5.5 0 0 1 .708 0L7.5 1.707l1.146-1.147a.5.5 0 0 1 .708 0L9.5 1.707l1.146-1.147a.5.5 0 0 1 .708 0l.646.647a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0L8.5 3.707l-1.146 1.147a.5.5 0 0 1-.708 0L6.5 3.707 3.707 6.5l2.646 2.647a.5.5 0 0 0 .708 0l2-2a.5.5"/>
+				</svg>
+			</div>
+			
+			<h1>404 Not Found</h1>
+			<h2>正在开发中 🚧</h2>
+			
+			<div class="message">
+				<p>抱歉，您访问的页面正在施工维护中！</p>
+				<p>我们的工程师正在全力抢修，即将为您带来更好的体验。</p>
+				<p>敬请期待全新版本的发布！</p>
+			</div>
+	
+			<div class="admin-contact">
+				如有紧急问题请联系：<br>
+				<a href="mailto:ZhangHengXinNMG@163.com">ZhangHengXinNMG@163.com</a>
+			</div>
+	
+			<hr style="margin: 40px auto; width: 60%;">
+	
+			<div style="text-align: center; font-size: 15px; margin-top: 30px;">
+				Powered by <a class="btlink" href="https://www.bt.cn/?from=404" target="_blank">小胡的成长记录站</a>
+			</div>
+		</div>
+	</body>
+	</html>
